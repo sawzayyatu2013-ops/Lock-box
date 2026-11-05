@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # 🔐 lockbox
 
 Encrypt & decrypt any file with a password. Cross-platform, single binary.
@@ -7,13 +6,21 @@ Encrypt & decrypt any file with a password. Cross-platform, single binary.
 
 ## 🚀 How to Install & Run
 
-If you have Rust installed on your system, you can build and install this tool directly to your path:
+### For Rust Developers (Fastest)
+If you have Rust installed, you can install `lockbox` directly from this repository without even cloning it:
+
+cargo install --git https://github.com/sawzayyatu2013-ops/Lock-box.git
+
+### From Source (Manual)
+If you want to clone the repo and build it yourself:
 
 git clone https://github.com/sawzayyatu2013-ops/Lock-box.git
 cd Lock-box
 cargo install --path .
 
 ## 🛠️ Usage
+
+Once installed, you can run `lockbox` from any directory in your terminal.
 
 Encrypt a file (creates secrets.txt.lockbox):
 lockbox encrypt secrets.txt
@@ -41,6 +48,8 @@ Every `.lockbox` file is structured like this:
 
 ## 🧪 Run the Tests
 
+If you are developing locally, you can run the cryptographic test suite:
+
 cargo test
 EOF
-
+t:
